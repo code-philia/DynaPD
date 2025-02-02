@@ -93,4 +93,21 @@ In the case where you would want to change the location of the folder that store
 some configuration is required to allow access to those folders from localhost.
 
 
+## Citation
+If you find our work useful, please consider citing our paper :)
+```bibtex
+@inproceedings {291106,
+    author = {Ruofan Liu and Yun Lin and Yifan Zhang and Penn Han Lee and Jin Song Dong},
+    title = {Knowledge Expansion and Counterfactual Interaction for {Reference-Based} Phishing Detection},
+    booktitle = {32nd USENIX Security Symposium (USENIX Security 23)},
+    year = {2023},
+    isbn = {978-1-939133-37-3},
+    address = {Anaheim, CA},
+    pages = {4139--4156},
+    url = {https://www.usenix.org/conference/usenixsecurity23/presentation/liu-ruofan},
+    publisher = {USENIX Association},
+    month = aug,
+}
+```
+```
 
