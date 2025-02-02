@@ -48,6 +48,9 @@ We crawled over 6k phishing kits, which cover over 2059 phishing kit families. T
 
 7. Visit the hosted kits at http://phishing.localhost
 
+   <img width="633" alt="Screenshot 2025-02-02 at 12 46 31 PM" src="https://github.com/user-attachments/assets/9b5ab26b-5786-417b-b1de-4099beb00749" />
+
+
 ### For Linux Users
 
 1. Download the DynaPD phishing kit dataset from this [link](https://drive.google.com/file/d/1o2Hgr3SvtcsVsMiB4gnSafMezc_4FSLa/view?usp=sharing)
@@ -81,6 +84,7 @@ sudo /opt/lampp/lampp start
 
 7. Visit the hosted kits at http://phishing.localhost
 
+
 ## Notes
 
 In the case where there are failures with starting the Apache server. 
@@ -109,5 +113,3 @@ If you find our work useful, please consider citing our paper :)
     month = aug,
 }
 ```
-```
-
