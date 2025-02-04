@@ -10,34 +10,25 @@ We crawled over 6k phishing kits, which cover over 2059 phishing kit families. T
 
 1. Download the DynaPD phishing kit dataset from this [link](https://drive.google.com/file/d/1o2Hgr3SvtcsVsMiB4gnSafMezc_4FSLa/view?usp=sharing)
 2. Download [XAMPP](https://www.apachefriends.org/), run installation
-3. Move the downloaded DynaPD dataset to **xampp/htdocs**
+3. Move the downloaded DynaPD dataset to **C:/xampp/htdocs**
    
-   <img width="713" alt="1" src="https://github.com/user-attachments/assets/a43f6d14-b7e4-45c7-9663-6ae08a4ad36f" />
-
-5. Edit the **Windows/System32/drivers/etc/hosts** file:
-
-   For each subdomain, add the IP address **_127.0.0.1<space><subdomain>.localhost_** each on a new line.
-
-   Note: This can be automated with a script. One script is included in the folder
-
-   <img width="494" alt="2" src="https://github.com/user-attachments/assets/763f045e-4eb1-4366-8c8b-0044549a67bb" />
-
+5. Edit the **Windows/System32/drivers/etc/hosts** file, add this line
+   
+   ```
+   127.0.0.1       phishing.localhost
+   ```
 
 7. Edit the **C:/xampp/apache/conf/extra/httpd-vhosts.conf** file:
 
-   For each phishing kit, add a tag
    ```
    <VirtualHost *:80>
-     DocumentRoot <path_to_kit>
-     Servername <subdomain_name>
+    DocumentRoot "phishing-kit"
+    ServerName phishing.localhost
+    <Directory "phishing-kit">
+       Require all granted
+    </Directory>
    </VirtualHost *:80>
    ```
-
-   The <subdomain_name> has to be consistent with what was created in the hosts file.
-
-   Note: This can be automated with a script. One script is included in the folder
-
-   <img width="430" alt="3" src="https://github.com/user-attachments/assets/231ced74-9a42-4f09-9579-e87bbc4cebe0" />
 
 
 6. Start the server:
@@ -57,7 +48,7 @@ We crawled over 6k phishing kits, which cover over 2059 phishing kit families. T
 2. Download [XAMPP](https://www.apachefriends.org/), run **xampp-linux-x64-8.0.28-0-installer.run**, the xampp will be installed in /opt/lampp
 3. Edit **/opt/lampp/etc/httpd.conf**, uncomment this line
    ```
-	# Virtual hosts
+   # Virtual hosts
    Include etc/extra/httpd-vhosts.conf
    ```
 4. Edit **/opt/lampp/etc/extra/httpd-vhosts.conf**, Add the following
